@@ -6,7 +6,7 @@
         <div class="p-5">
                 <h5 class="bg-white text-teal px-2 py-1">Tahukan Kamu?</h5>
             <div class="my-4">
-                <img class="rounded" src="{{ asset('images/image_placeholder.jpeg') }}"
+                <img class="rounded" src="https://cdn.shopify.com/s/files/1/0289/9102/9332/files/shutterstock_1317343253_Converted_-01_480x480.jpg?v=1670852529"
                     alt="Placeholder untuk image ini" style="aspect-ratio: 1.8; width: 100%;">
             </div>
 
@@ -40,7 +40,7 @@
                 </p>
             </div>
             <div class="my-5">
-                <img class="rounded" src="{{ asset('images/image_placeholder.jpeg') }}"
+                <img class="rounded" src="https://www.encyclopedie-environnement.org/app/uploads/2020/02/Photosynthesis-fig8.png"
                     alt="Placeholder untuk image ini" style="aspect-ratio: 1.8; width: 100%;">
             </div>
             <p>
@@ -65,7 +65,7 @@
             </h4>
             <div class="row">
                 <div class="col-5">
-                    <img class="rounded" src="{{ asset('images/image_placeholder.jpeg') }}"
+                    <img class="rounded" src="https://naturesdepths.com/wp/wp-content/uploads/Hemlock-Stomata-350-1.jpg"
                         alt="Placeholder untuk image ini" style="width: 100%; object-fit: cover;">
                 </div>
                 <div class="col">
@@ -95,7 +95,7 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <img class="rounded" src="{{ asset('images/image_placeholder.jpeg') }}"
+                    <img class="rounded" src="https://asset.kompas.com/crops/7M3Y_meuAYl1L34lnEV50as67WU=/63x0:448x257/375x240/data/photo/2020/03/10/5e67970c3bf6f.png"
                         alt="Placeholder untuk image ini" style="width: 100%; object-fit: cover;">
                 </div>
             </div>

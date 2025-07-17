@@ -10,7 +10,7 @@
                     Translokasi Gula Tidak Hanya Turun, Tapi Juga Bisa Naik dan Menyamping!
                 </h5>
                 <div class="my-3">
-                    <img class="rounded" src="{{ asset('images/image_placeholder.jpeg') }}"
+                    <img class="rounded" src="https://i0.wp.com/ibbio.pbworks.com/f/translocation%20of%20sucrose.jpg"
                         alt="Placeholder untuk image ini" style="aspect-ratio: 1.8; width: 100%;">
                 </div>
                 <div>
@@ -47,7 +47,7 @@
                         </p>
             <div class="row">
                 <div class="col-5">
-                    <img class="rounded" src="{{ asset('images/image_placeholder.jpeg') }}"
+                    <img class="rounded" src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs42483-024-00286-1/MediaObjects/42483_2024_286_Fig3_HTML.png"
                         alt="Placeholder untuk image ini" style="width: 100%; object-fit: cover;">
                 </div>
                 <div class="col">

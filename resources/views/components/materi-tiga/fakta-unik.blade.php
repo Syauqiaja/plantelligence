@@ -17,7 +17,7 @@
                     </p>
                 </div>
                 <div class="my-3">
-                    <img class="rounded" src="{{ asset('images/image_placeholder.jpeg') }}"
+                    <img class="rounded" src="https://www.saprodi.id/wp-content/uploads/2021/06/Penggolongan-Unsur-Hara-Mikro.jpg"
                         alt="Placeholder untuk image ini" style="aspect-ratio: 1.8; width: 100%;">
                 </div>
                 <p>
@@ -42,7 +42,7 @@
             </h4>
             <div class="row">
                 <div class="col-5">
-                    <img class="rounded" src="{{ asset('images/image_placeholder.jpeg') }}"
+                    <img class="rounded" src="https://awsimages.detik.net.id/community/media/visual/2021/03/29/daun-sirih.jpeg?w=1200"
                         alt="Placeholder untuk image ini" style="width: 100%; object-fit: cover;">
                 </div>
                 <div class="col">

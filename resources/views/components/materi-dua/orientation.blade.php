@@ -35,7 +35,7 @@
             </div>
             <hr class="mx-2">
             <div class="row">
-                <div class="col-9">
+                <div class="col">
                     <h6 class="bg-white rounded text-blue px-3 py-1">
                         1: Orientation & Organization
                     </h6>
@@ -43,7 +43,7 @@
                     mengering cepat di bawah sinar
                     matahari.
                 </div>
-                <div class="col text-center">
+                <div class="col-3 text-center">
                     <div class="d-flex justify-content-center">
                         <div style="aspect-ratio: 1;" class="p-2 bg-white rounded">
                             <img src="{{ asset('images/qr code.png') }}" alt="" style="height: 80px; width: 80px;">
