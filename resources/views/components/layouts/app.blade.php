@@ -21,10 +21,8 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body class="bg-dark" style="height: 100vh; overflow: hidden;">
-    <main class="h-100">
-            {{ $slot }}
-    </main>
+<body class="bg-dark">
+    {{ $slot }}
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="{{ asset('js/turn.min.js') }}"></script>
