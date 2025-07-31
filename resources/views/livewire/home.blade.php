@@ -2,14 +2,12 @@
 <div class="d-flex justify-content-center">
     <div>
         <!-- Updated HTML structure -->
-        <div class="flipbook-container">
-            <div class="wrapper" id="flipbook-wrapper">
-                <div id="flipbook" class="flipbook-loading">
-                    Loading flipbook...
-                </div>
+        <div class="wrapper" id="flipbook-wrapper">
+            <div id="flipbook" class="flipbook-loading">
+                Loading flipbook...
             </div>
         </div>
-    
+
         <!-- Your pages will be loaded here after flipbook initialization -->
         <div id="flipbook-pages" style="display: none;">
             <livewire:cover />
@@ -30,16 +28,15 @@
     </div>
 </div>
 
-@push('scripts')
-
 <script>
-    // Enhanced responsive flipbook script with proper error handling
+    // Enhanced responsive flipbook script with proper scaling
 class ResponsiveFlipbook {
   constructor() {
     this.container = null;
     this.flipbook = null;
     this.originalWidth = 1100;
     this.originalHeight = 830;
+    this.currentScale = 1;
     this.isInitialized = false;
     this.resizeTimer = null;
     
@@ -79,6 +76,8 @@ class ResponsiveFlipbook {
   
   setupFlipbook() {
     try {
+      console.log("Setup flipbook");
+      
       // Clear any existing content
       this.flipbook.innerHTML = '';
       this.flipbook.className = '';
@@ -95,12 +94,41 @@ class ResponsiveFlipbook {
         });
       }
       
-      // Initialize Turn.js with error handling
+      // Calculate initial scale before initializing Turn.js
+      this.calculateScale();
+      
+      // Initialize Turn.js with scaled dimensions
       this.initializeTurnJS();
       
     } catch (error) {
       console.error('Error setting up flipbook:', error);
       this.showError();
+    }
+  }
+  
+  calculateScale() {
+    if (!this.container) return;
+    
+    try {
+      // Get available space
+      const containerRect = this.container.parentElement.getBoundingClientRect();
+      const padding = 40; // Account for padding
+      const availableWidth = containerRect.width - padding;
+      const availableHeight = containerRect.height - padding;
+      
+      // Calculate scale ratios
+      const scaleX = availableWidth / this.originalWidth;
+      const scaleY = availableHeight / this.originalHeight;
+      
+      console.log("Available space " + availableHeight + " : " + availableWidth);
+      console.log("Available scale " + scaleY + " : " + scaleX);
+      
+      // Use the smaller scale and cap at 1
+      this.currentScale = Math.min(scaleX, scaleY, 1);
+      
+    } catch (error) {
+      console.error('Error calculating scale:', error);
+      this.currentScale = 1;
     }
   }
   
@@ -120,14 +148,18 @@ class ResponsiveFlipbook {
     $flipbook.removeData('turn');
     $flipbook.removeClass('turn-js');
     
+    // Calculate scaled dimensions
+    const scaledWidth = this.originalWidth * this.currentScale;
+    const scaledHeight = this.originalHeight * this.currentScale;
+    
     // Wait a bit for DOM to settle
     setTimeout(() => {
       try {
         $flipbook.turn({
           gradients: true,
           acceleration: true,
-          height: this.originalHeight,
-          width: this.originalWidth,
+          height: scaledHeight,
+          width: scaledWidth,
           autoCenter: true,
           display: 'double',
           when: {
@@ -149,8 +181,11 @@ class ResponsiveFlipbook {
         });
         
         this.isInitialized = true;
-        this.scaleFlipbook();
+        this.adjustContainerSize();
         this.bindEvents();
+        
+        console.log('Flipbook initialized with scale:', this.currentScale);
+        console.log('Scaled dimensions:', scaledWidth + 'x' + scaledHeight);
         
       } catch (error) {
         console.error('Error initializing Turn.js:', error);
@@ -159,30 +194,33 @@ class ResponsiveFlipbook {
     }, 200);
   }
   
-  scaleFlipbook() {
+  adjustContainerSize() {
     if (!this.isInitialized || !this.container) return;
     
     try {
-      // Get available space
-      const containerRect = this.container.parentElement.getBoundingClientRect();
-      const padding = 40; // Account for padding
-      const availableWidth = containerRect.width - padding;
-      const availableHeight = containerRect.height - padding;
+      // Set container to match the scaled flipbook size
+      const scaledWidth = this.originalWidth * this.currentScale;
+      const scaledHeight = this.originalHeight * this.currentScale;
       
-      // Calculate scale ratios
-      const scaleX = availableWidth / this.originalWidth;
-      const scaleY = availableHeight / this.originalHeight;
-      
-      // Use the smaller scale and cap at 1
-      const scale = Math.min(scaleX, scaleY, 1);
-      
-      // Apply transform
-      this.container.style.transform = `scale(${scale})`;
-      this.container.style.width = `${this.originalWidth}px`;
-      this.container.style.height = `${this.originalHeight}px`;
+      this.container.style.width = `${scaledWidth}px`;
+      this.container.style.height = `${scaledHeight}px`;
+      this.container.style.transform = 'none'; // Remove any scaling transforms
       
     } catch (error) {
-      console.error('Error scaling flipbook:', error);
+      console.error('Error adjusting container size:', error);
+    }
+  }
+  
+  handleResize() {
+    if (!this.isInitialized) return;
+    
+    const oldScale = this.currentScale;
+    this.calculateScale();
+    
+    // Only reinitialize if scale changed significantly
+    if (Math.abs(oldScale - this.currentScale) > 0.05) {
+      console.log('Scale changed from', oldScale, 'to', this.currentScale, '- reinitializing');
+      this.reinitialize();
     }
   }
   
@@ -191,13 +229,13 @@ class ResponsiveFlipbook {
     const handleResize = () => {
       clearTimeout(this.resizeTimer);
       this.resizeTimer = setTimeout(() => {
-        this.scaleFlipbook();
+        this.handleResize();
       }, 250);
     };
     
     window.addEventListener('resize', handleResize);
     window.addEventListener('orientationchange', () => {
-      setTimeout(() => this.scaleFlipbook(), 500);
+      setTimeout(() => this.handleResize(), 500);
     });
     
     // Touch gestures for mobile
@@ -280,4 +318,3 @@ setTimeout(initFlipbook, 1000);
 // Make instance globally available for debugging
 window.flipbookInstance = flipbookInstance;
 </script>
-@endpush

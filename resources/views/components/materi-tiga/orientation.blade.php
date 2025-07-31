@@ -68,7 +68,7 @@
             <hr>
 
             <div class="mt-5">
-                <div class="d-flex justify-content-between">{{$pageTitle}}
+                <div class="d-flex justify-content-between">
                     <a class="btn btn-white text-white rounded" href="#" style="text-decoration: none;">
                         <div class="d-flex align-items-center">
                             <div>

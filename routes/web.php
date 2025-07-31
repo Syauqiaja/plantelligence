@@ -1,9 +1,8 @@
 <?php
 
 use App\Livewire\Home;
-use App\Livewire\PageTest;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/',  Home::class);
+Route::get('/', Home::class)->name('home');
 
-Route::get('/test',  PageTest::class);
+require __DIR__.'/auth.php';

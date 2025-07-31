@@ -20,6 +20,7 @@
         "APP_ENV": "production",
         "APP_DEBUG": "true",
         "APP_URL": "https://plantelligence-snowy.vercel.app",
+        "ASSET_URL": "https://plantelligence-snowy.vercel.app",
         "APP_KEY": "base64:zQgmGaBogZVlHHJJHp1vAQLs4VoUyTUMbGidUUzZW5I=",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
