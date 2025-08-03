@@ -59,3 +59,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+window.addEventListener('closeModal', function(event){
+    const modalId = event.detail;
+    const modal = document.getElementById(modalId);
+    const modalInstance = bootstrap.Modal.getInstance(modal);
+    if (modalInstance) {
+        modalInstance.hide();
+    }
+});

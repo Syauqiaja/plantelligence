@@ -78,18 +78,7 @@
 
             <div class="mt-5">
                 <div class="d-flex justify-content-between">
-                    <a class="btn btn-white text-white rounded" href="#" style="text-decoration: none;">
-                        <div class="d-flex align-items-center">
-                            <div>
-                                <i class="bi bi-journal-text fs-1"></i>
-                            </div>
-                            <div class="ms-2 text-start">
-                                Essay Deskriptif <br>
-                                <small style="opacity: 0.7;">Tugas Wajib</small>
-                            </div>
-                        </div>
-                    </a>
-
+                    <x-essai-deskriptif-button/>
                     
                     <a class="btn btn-light text-teal rounded px-2 py-0" href="#" style="text-decoration: none;">
                         <div class="d-flex align-items-center flex-column text-center">

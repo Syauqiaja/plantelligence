@@ -16,32 +16,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-dark p-0" style="overflow: hidden;">
-    <div class="container-fluid p-0 m-0">
-        <!-- Mobile Sidebar Toggle -->
-        <div id="mobileSidebarToggle" class="d-md-none bg-white border-bottom px-3 py-2 w-100">
-            <div class="d-flex justify-content-between">
-                <button class="btn btn-outline-primary" type="button" id="sidebarToggleBtn"
-                    aria-label="Toggle navigation">
-                    <i class="bi bi-list fs-4"></i>
-                </button>
-                <a href="/" class="d-flex align-items-center link-primary text-decoration-none">
-                    <i class="bi bi-mortarboard fs-2 me-2"></i>
-                    <span class="fs-4 fw-bold">Plantelligence</span>
-                </a>
-            </div>
-        </div>
-        <!-- Sidebar Backdrop -->
-        <div class="sidebar-backdrop d-md-none" id="sidebarBackdrop"></div>
-        <div class="d-flex">
-            <!-- Sidebar Component -->
-            <x-navigation.sidebar />
-            <!-- Main Content -->
-            <div class="flex-grow-1">
-                {{ $slot }}
-            </div>
-        </div>
-    </div>
+<body class="bg-dark p-0">
+    {{ $slot }}
     @stack('modals')
     <!-- External JS Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
