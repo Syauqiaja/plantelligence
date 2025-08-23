@@ -20,6 +20,9 @@ body{
 .bg-purple{
     background-color: rgb(143, 64, 255);
 }
+.bg-gradient-blue{
+    background: linear-gradient(135deg, rgb(8, 171, 171) 0%, rgb(0, 136, 255) 100%); padding: 2rem 2rem 1rem;
+}
 
 .text-teal{
     color: rgb(8, 171, 171);

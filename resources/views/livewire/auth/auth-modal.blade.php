@@ -1,7 +1,5 @@
-<div class="modal-content border-0 shadow-lg" style="border-radius: 16px; overflow: hidden;">
-    <!-- Header -->
-    <div class="modal-header border-0 position-relative"
-        style="background: linear-gradient(135deg, rgb(8, 171, 171) 0%, rgb(0, 136, 255) 100%); padding: 2rem 2rem 1rem;">
+<div class="modal-content border-0 shadow-lg rounded" style="overflow: hidden;">
+    <x-modal.modal-header>
         <div class="w-100 text-center">
             <div class="mb-3">
                 <i class="fas fa-user-circle text-white" style="font-size: 3rem; opacity: 0.9;"></i>
@@ -13,10 +11,7 @@
                 {{ $isLogin ? 'Sign in to your account' : 'Register to get started' }}
             </p>
         </div>
-        <button type="button" class="btn-close btn-close-white position-absolute" data-bs-dismiss="modal"
-            aria-label="Close" style="top: 1rem; right: 1rem;"></button>
-    </div>
-
+    </x-modal.modal-header>
     <!-- Body -->
     <div class="modal-body p-4" style="background: #f8f9fa;">
         <!-- Login Form -->
@@ -29,7 +24,7 @@
                 <input type="email" wire:model="email" class="form-control form-control-lg border-0 shadow-sm"
                     placeholder="Enter your email" required>
                 @error('email')
-                    {{ $message }}
+                {{ $message }}
                 @enderror
             </div>
             <div class="mb-4">
@@ -40,7 +35,7 @@
                     placeholder="Enter your password" required>
 
                 @error('password')
-                    {{ $message }}
+                {{ $message }}
                 @enderror
             </div>
             <div class="d-flex justify-content-between align-items-center mb-4">
@@ -67,9 +62,9 @@
                 <input type="text" wire:model="name" class="form-control form-control-lg border-0 shadow-sm"
                     placeholder="Full Name" required>
 
-            @error('name')
+                @error('name')
                 {{ $message }}
-            @enderror
+                @enderror
             </div>
             <div class="mb-3">
                 <label class="form-label fw-semibold text-dark">
@@ -79,7 +74,7 @@
                     placeholder="Enter your email" required>
 
                 @error('email')
-                    {{ $message }}
+                {{ $message }}
                 @enderror
             </div>
             <div class="mb-3">
@@ -88,9 +83,9 @@
                 </label>
                 <input type="password" wire:model="password" class="form-control form-control-lg border-0 shadow-sm"
                     placeholder="Create password" required>
-                
+
                 @error('password')
-                    {{ $message }}
+                {{ $message }}
                 @enderror
             </div>
             <div class="mb-4">
@@ -101,7 +96,7 @@
                     class="form-control form-control-lg border-0 shadow-sm" placeholder="Confirm password" required>
 
                 @error('password_confirmation')
-                    {{ $message }}
+                {{ $message }}
                 @enderror
             </div>
             <div class="form-check mb-4">

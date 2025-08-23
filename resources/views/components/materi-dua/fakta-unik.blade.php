@@ -72,14 +72,3 @@
         </div>
     </div>
 </div>
-<div class="bg-blue text-white">
-    <div class="position-relative w-100 h-100">
-        <div class="p-5">
-
-        </div>
-
-        <div class="position-absolute" style="bottom:12px; right: 16px;">
-            <small>{{$pageTitle}}</small>
-        </div>
-    </div>
-</div>

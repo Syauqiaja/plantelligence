@@ -21,6 +21,6 @@
     "dependencies": {
         "@popperjs/core": "^2.11.8",
         "bootstrap": "^5.3.7",
-        "vercel": "^44.6.4"
+        "vercel": "^44.7.0"
     }
 }
