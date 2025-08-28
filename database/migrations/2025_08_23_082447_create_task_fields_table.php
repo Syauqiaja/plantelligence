@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('order');
             $table->string('url')->nullable();
             $table->string('file')->nullable();
+            $table->string('format')->nullable();
             $table->timestamps();
         });
     }

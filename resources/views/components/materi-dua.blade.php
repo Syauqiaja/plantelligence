@@ -9,7 +9,7 @@
         </div>
         <div class="flex-grow-1">
             <iframe
-            src="{{asset('pdfjs/web/viewer.html')}}?file={{ asset('pdf/Materi 2 Keseimbangan Air dalam Tubuh Tumbuhan.pdf') }}"
+            src="{{asset('pdfjs/web/viewer.html')}}?file={{ asset('pdf/Materi_2.pdf') }}"
             width="100%"
             height="100%"
             ></iframe>

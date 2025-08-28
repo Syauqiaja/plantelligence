@@ -8,7 +8,7 @@
         </div>
         <div class="flex-grow-1">
             <iframe
-            src="{{asset('pdfjs/web/viewer.html')}}?file={{ asset('pdf/Materi 3 Nutrisi & Transport Nutrisi pada Tumbuhan.pdf') }}"
+            src="{{asset('pdfjs/web/viewer.html')}}?file={{ asset('pdf/Materi_3.pdf') }}"
             width="100%"
             height="100%"
             ></iframe>

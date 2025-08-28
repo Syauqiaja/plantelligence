@@ -14,6 +14,9 @@
                 </div>
                 <div class="mt-3">
                     <input class="form-control" type="file" wire:model='file'>
+                    @if ($taskField->format)
+                        <small class="mt-2">Format file : {{$taskField->format}}</small>
+                    @endif
                 </div>
             </div>
             @error('file')
