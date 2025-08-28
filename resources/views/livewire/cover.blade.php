@@ -4,6 +4,8 @@
             <div>
                 <img src="{{ asset('images/logo um.png') }}" alt="" style="width: 48px; height: 48px;">
             </div>
+            <img class="w-100 position-absolute" style="bottom: 0;" src="{{ asset('images/plant_bottom_border.png') }}"
+                alt="">
             <h5 class="text-center fw-bold mt-5">E-Module <span class="text-primary">“Plantelligence”</span> Cerdas
                 Belajar Fisiologi Tumbuhan dengan PBL dan AI</h5>
             <div class="d-flex align-items-center flex-column mt-1">
@@ -17,8 +19,5 @@
                 Prof. Dra. Herawati Susilo, M.Sc., Ph.D <br>
             </div>
         </div>
-
-        <img class="w-100 position-absolute" style="bottom: 0;" src="{{ asset('images/plant_bottom_border.png') }}"
-            alt="">
     </div>
 </div>

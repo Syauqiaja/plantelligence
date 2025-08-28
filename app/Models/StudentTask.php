@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class StudentTask extends Model
 {
     protected $fillable = [
-        'title', 'key'
+        'title', 'key', 'file'
     ];
 
-    public function taskField(){
-        return $this->hasOne(TaskField::class, 'student_task_id');
+    public function taskFields(){
+        return $this->hasMany(TaskField::class, 'student_task_id');
     }
     public static function byKey(StudentTaskKey $key): ?self
     {

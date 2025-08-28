@@ -4,27 +4,27 @@
             <h5 class="h4 text-center">Pengumpulan Tugas</h5>
         </div>
     </x-modal.modal-header>
-    <div class="modal-body p-3">
-        @foreach ([1,2,3,4] as $task)
+    @if ($taskField)
+        <form class="modal-body p-3" wire:submit='save'> @csrf
             <div class="task-container mt-3">
                 <div class="d-flex">
-                    <div>
-                        <x-number-box :height="40" :width="40">{{$task}}</x-number-box>
-                    </div>
                     <div class="flex-grow-1 ms-2">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        {{ $taskField->title ?? $taskField->studentTask->title }}
                     </div>
                 </div>
-                <div class="mt-1">
-                    <input class="form-control" type="file" name="" id="">
+                <div class="mt-3">
+                    <input class="form-control" type="file" wire:model='file'>
                 </div>
             </div>
+            @error('file')
+                <small class="text-danger">{{$message}}</small>
+            @enderror
             <hr class="my-4">
-        @endforeach
-        <div class="d-flex justify-content-end">
-                <button class="btn btn-success my-3 py-2 px-5 ms-auto">
+            <div class="d-flex justify-content-end">
+                <button class="btn btn-success my-3 py-2 px-5 ms-auto" type="submit">
                     Simpan
                 </button>
             </div>
-    </div>
+        </form>
+    @endif
 </div>

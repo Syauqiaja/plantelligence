@@ -11,7 +11,7 @@ $pageTitle = 'Materi 1: Air dan Sel Tumbuhan';
         </div>
         <div class="flex-grow-1">
             <iframe
-            src="{{asset('pdfjs/web/viewer.html')}}?file={{ asset('pdf/dummy_document.pdf') }}"
+            src="{{asset('pdfjs/web/viewer.html')}}?file={{ asset('pdf/Materi 1 Sel dan Air Pada Tumbuhan.pdf') }}"
             width="100%"
             height="100%"
             ></iframe>
@@ -20,4 +20,3 @@ $pageTitle = 'Materi 1: Air dan Sel Tumbuhan';
 </div>
 <x-materi-satu.fakta-unik />
 <x-quiz-page :materi="1" :pageTitle="'Materi 1: Air dan Sel Tumbuhan'" :color="'teal'" />
-<x-refleksi-ai :materi="1" :pageTitle="'Materi 1: Air dan Sel Tumbuhan'" :color="'teal'" />

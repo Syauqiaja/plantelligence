@@ -1,5 +1,7 @@
 <?php
-    
+
+use Illuminate\Support\Facades\Storage;
+
 if (!function_exists('scoreToFeedback')) {
     function scoreToFeedback($score)
     {
@@ -14,5 +16,13 @@ if (!function_exists('scoreToFeedback')) {
         }else{
             return "Nilai ini bukan akhir dari segalanya ini justru awal dari proses belajar yang sesungguhnya. Mungkin kamu sedang beradaptasi atau belum menemukan metode belajar yang paling sesuai untukmu. Jangan khawatir, e-module ini menyediakan berbagai alat bantu seperti refleksi “Aku & Pemahamanku”, visualisasi, serta dukungan AI yang bisa kamu manfaatkan untuk belajar lebih menyenangkan dan personal. Cobalah ulangi materi dengan perlahan dan tanpa tekanan. Satu langkah kecil hari ini akan membawamu menuju pemahaman yang lebih besar esok hari. Tetap semangat, kamu tidak sendiri dalam perjalanan ini!";
         }
+    }
+}
+
+if (!function_exists('storage_url')) {
+    function storage_url($path)
+    {
+        $url = Storage::url($path);
+        return $url;
     }
 }

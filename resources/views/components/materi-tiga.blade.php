@@ -8,7 +8,7 @@
         </div>
         <div class="flex-grow-1">
             <iframe
-            src="{{asset('pdfjs/web/viewer.html')}}?file={{ asset('pdf/dummy_document.pdf') }}"
+            src="{{asset('pdfjs/web/viewer.html')}}?file={{ asset('pdf/Materi 3 Nutrisi & Transport Nutrisi pada Tumbuhan.pdf') }}"
             width="100%"
             height="100%"
             ></iframe>
@@ -17,4 +17,3 @@
 </div>
 <x-materi-tiga.fakta-unik/>
 <x-quiz-page :materi="3" :pageTitle="'Materi 3: Nutrisi dan Transport'" :color="'purple'"/>
-<x-refleksi-ai :materi="3" :pageTitle="'Materi 3: Nutrisi dan Transport'" :color="'purple'" />

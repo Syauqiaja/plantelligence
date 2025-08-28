@@ -20,10 +20,10 @@ class Glosarium extends Component
         'Fotosintesis' => 'Proses konversi energi cahaya menjadi energi kimia dalam bentuk glukosa oleh tumbuhan hijau.',
         'Floem' => 'Jaringan pengangkut yang bertugas menyalurkan hasil fotosintesis (seperti gula) dari daun ke seluruh tubuh tumbuhan.',
         'Grana' => 'Tumpukan tilakoid di dalam kloroplas tempat berlangsungnya reaksi terang fotosintesis.',
-        'Hara esensial' => 'Unsur-unsur kimia yang mutlak diperlukan tumbuhan untuk melangsungkan siklus hidupnya secara normal.',
     ];
 
     public $glosariumPageTwo = [
+        'Hara esensial' => 'Unsur-unsur kimia yang mutlak diperlukan tumbuhan untuk melangsungkan siklus hidupnya secara normal.',
         'Imbibisi' => 'Proses awal masuknya air ke dalam biji kering yang memicu dimulainya perkecambahan.',
         'Ion' => 'Atom atau molekul bermuatan yang terlibat dalam transportasi nutrisi dan aktivitas enzimatik di dalam sel tumbuhan.',
         'Klorofil' => 'Pigmen hijau dalam kloroplas yang menyerap cahaya matahari untuk fotosintesis.',
@@ -37,11 +37,11 @@ class Glosarium extends Component
         'Phloem unloading' => 'Proses pengosongan asimilat dari floem ke jaringan sink (seperti buah, akar, atau biji).',
         'Pigmen' => 'Zat pewarna dalam tumbuhan yang menyerap cahaya untuk fotosintesis, seperti klorofil dan karotenoid.',
         'Polaritas air' => 'Sifat molekul air yang memiliki distribusi muatan tidak merata, memungkinkan terbentuknya ikatan hidrogen.',
-        'Sink' => 'Jaringan atau organ tumbuhan yang menggunakan atau menyimpan hasil fotosintesis.',
-        'Source' => 'Organ atau jaringan penghasil hasil fotosintesis, seperti daun dewasa.',
     ];
 
     public $glosariumPageThree = [
+        'Sink' => 'Jaringan atau organ tumbuhan yang menggunakan atau menyimpan hasil fotosintesis.',
+        'Source' => 'Organ atau jaringan penghasil hasil fotosintesis, seperti daun dewasa.',
         'Spektrum aksi' => 'Grafik yang menunjukkan efektivitas panjang gelombang cahaya terhadap suatu proses biologi, seperti fotosintesis.',
         'Spektrum absorbsi' => 'Grafik yang menunjukkan panjang gelombang cahaya yang diserap oleh suatu pigmen.',
         'Stomata' => 'Celah kecil di permukaan daun yang mengatur pertukaran gas dan transpirasi.',

@@ -13,4 +13,11 @@ class TaskField extends Model
         'url',
         'file',
     ];
+
+    public function studentAssignments(){
+        return $this->hasMany(StudentTaskAssignment::class, 'task_field_id');
+    }
+    public function studentTask(){
+        return $this->belongsTo(StudentTask::class, 'student_task_id');
+    }
 }

@@ -1,66 +1,35 @@
 <div class="bg-white">
-
     <div class="d-flex justify-content-start align-items-start h-100 daftar-isi">
-        <nav class="nav w-100 flex-column rounded p-3    bg-white">
-        <h5 class="text-center my-3">Daftar Isi</h5>
-    
-            <a class="nav-link mb-1 text-dark" href="#">Kata Pengantar</a>
-            <a class="nav-link mb-1 text-dark" href="#">Petunjuk Penggunaan</a>
-            <a class="nav-link mb-1 text-dark" href="#">Elemen E-Modul</a>
-            <a class="nav-link mb-1 text-dark" href="#">CPMK & Tujuan Pembelajaran</a>
-            <a class="nav-link mb-1 text-dark" href="#">Peta Konsep</a>
-            
-            <div class="accordion ms-3" id="materiAccordion">
+        <nav class="nav w-100 flex-column rounded p-3 bg-white">
+            <h5 class="text-center my-3">Daftar Isi</h5>
+            <div style="font-size: 13px;">
+                <button id="btnKataPengantar" class="nav-link mb-1 text-dark">Kata Pengantar</button>
+                <button id="btnPetunjukPenggunaan" class="nav-link mb-1 text-dark">Petunjuk Penggunaan</button>
+                <button id="btnElemenModul" class="nav-link mb-1 text-dark">Elemen E-Modul</button>
+                <button id="btnCPMK" class="nav-link mb-1 text-dark">CPMK & Tujuan Pembelajaran</button>
+                <button class="nav-link mb-1 text-dark">Daftar Isi</button>
+                <button id="btnPetaKonsep" class="nav-link mb-1 text-dark">Peta Konsep</button>
+
                 <!-- Materi 1 -->
-                <div class="accordion-item border-0">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target="#materi1">
-                            Materi 1: Air dan Sel Tumbuhan
-                        </button>
-                    </h2>
-                    <div id="materi1" class="accordion-collapse collapse" data-bs-parent="#materiAccordion">
-                        <div class="accordion-body px-2 py-1">
-                            <a class="nav-link ms-2 text-muted" href="#">• Fakta Unik</a>
-                            <a class="nav-link ms-2 text-muted" href="#">• Quiz</a>
-                        </div>
-                    </div>
-                </div>
-    
+                <button id="btnMateri1" class="nav-link mt-2 text-dark fw-bold">Materi 1: Air dan Sel Tumbuhan</button>
+                <button id="btnMateri1FaktaUnik" class="nav-link ms-3 text-muted">• Fakta Unik</button>
+                <button id="btnMateri1Quiz" class="nav-link ms-3 text-muted">• Quiz</button>
+
                 <!-- Materi 2 -->
-                <div class="accordion-item border-0">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target="#materi2">
-                            Materi 2: Transpirasi
-                        </button>
-                    </h2>
-                    <div id="materi2" class="accordion-collapse collapse" data-bs-parent="#materiAccordion">
-                        <div class="accordion-body px-2 py-1">
-                            <a class="nav-link ms-2 text-muted" href="#">• Fakta Unik</a>
-                            <a class="nav-link ms-2 text-muted" href="#">• Quiz</a>
-                        </div>
-                    </div>
-                </div>
-    
+                <button id="btnMateri2" class="nav-link mt-2 text-dark fw-bold">Materi 2: Transpirasi</button>
+                <button id="btnMateri2FaktaUnik" class="nav-link ms-3 text-muted">• Fakta Unik</button>
+                <button id="btnMateri2Quiz" class="nav-link ms-3 text-muted">• Quiz</button>
+
                 <!-- Materi 3 -->
-                <div class="accordion-item border-0">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target="#materi3">
-                            Materi 3: Nutrisi & Transport
-                        </button>
-                    </h2>
-                    <div id="materi3" class="accordion-collapse collapse" data-bs-parent="#materiAccordion">
-                        <div class="accordion-body px-2 py-1">
-                            <a class="nav-link ms-2 text-muted" href="#">• Fakta Unik</a>
-                            <a class="nav-link ms-2 text-muted" href="#">• Quiz</a>
-                        </div>
-                    </div>
-                </div>
+                <button id="btnMateri3" class="nav-link mt-2 text-dark fw-bold">Materi 3: Nutrisi & Transport</button>
+                <button id="btnMateri3FaktaUnik" class="nav-link ms-3 text-muted">• Fakta Unik</button>
+                <button id="btnMateri3Quiz" class="nav-link ms-3 text-muted">• Quiz</button>
+
+                <button id="btnPortalTugas" class="nav-link mt-2 text-dark">Portal Tugas dan Uji Kompetensi</button>
+                <button id="btnGlosarium" class="nav-link text-dark">Glosarium</button>
+                <button id="btnDaftarPustaka" class="nav-link text-dark">Daftar Pustaka</button>
+                <button id="btnHalamanPenutup" class="nav-link text-dark">Halaman Penutup</button>
             </div>
-    
-            <a class="nav-link mt-1 text-dark" href="#">Refleksi: Aku & Pemahamanku</a>
-            <a class="nav-link text-dark" href="#">Glosarium</a>
-            <a class="nav-link text-dark" href="#">Daftar Pustaka</a>
-            <a class="nav-link text-dark" href="#">Halaman Penutup</a>
         </nav>
     </div>
 </div>

@@ -9,7 +9,7 @@
         </div>
         <div class="flex-grow-1">
             <iframe
-            src="{{asset('pdfjs/web/viewer.html')}}?file={{ asset('pdf/dummy_document.pdf') }}"
+            src="{{asset('pdfjs/web/viewer.html')}}?file={{ asset('pdf/Materi 2 Keseimbangan Air dalam Tubuh Tumbuhan.pdf') }}"
             width="100%"
             height="100%"
             ></iframe>
@@ -18,4 +18,3 @@
 </div>
 <x-materi-dua.fakta-unik/>
 <x-quiz-page :materi="2" :pageTitle="'Materi 2: Transpirasi'" :color="'blue'"/>
-<x-refleksi-ai :materi="2" :pageTitle="'Materi 2: Transpirasi'" :color="'blue'" />

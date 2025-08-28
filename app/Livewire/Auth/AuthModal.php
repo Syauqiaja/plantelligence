@@ -8,12 +8,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
 use App\Models\User;
 use Illuminate\Support\Facades\Redirect;
-use Masmerise\Toaster\Toastable;
-use Masmerise\Toaster\Toaster;
-
 class AuthModal extends Component
 {
-    use Toastable;
     public $showModal = false;
     public $isLogin = true;
     
@@ -120,7 +116,7 @@ class AuthModal extends Component
             
         } catch (\Exception $e) {
             $this->loading = false;
-            Toaster::warning('An error occurred while creating your account. Please try again.');
+            // Toaster::warning('An error occurred while creating your account. Please try again.');
         }
     }
     

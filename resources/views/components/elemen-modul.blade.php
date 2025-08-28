@@ -1,33 +1,77 @@
 <div class="bg-white">
     <div class="h-100 p-3">
         <h5 class="text-center my-3">Elemen Modul</h5>
-        <div class="card mt-4">
-            <div class="card-body">
-
-                <ol class="list-group list-group-numbered">
-                    <li class="list-group-item">
-                        <strong>Pelajari Setiap Bab:</strong> Modul ini terdiri dari beberapa bab yang membahas struktur
-                        tumbuhan, klasifikasi, dan peran ekologisnya.
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Gunakan Ilustrasi:</strong> Perhatikan gambar dan diagram untuk membantu memahami konsep
-                        morfologi dan anatomi tumbuhan.
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Kerjakan Aktivitas:</strong> Setiap bab disertai aktivitas seperti pertanyaan reflektif,
-                        tugas pengamatan, atau studi kasus.
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Manfaatkan Rangkuman:</strong> Di akhir setiap bab terdapat poin-poin penting yang
-                        merangkum materi pembelajaran.
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Lakukan Evaluasi Diri:</strong> Modul ini dilengkapi dengan soal latihan dan kuis untuk
-                        mengukur pemahaman Anda secara mandiri.
-                    </li>
-                </ol>
-
-            </div>
+        <div class="border rounded mt-4 p-3">
+            <table class="table" style="font-size: 13px;">
+                <tr>
+                    <td class="d-flex justify-content-center align-items-center">
+                        <div style="height:64px; width: 64px;">
+                            <img src="{{ asset('images/arrow.png') }}" style="object-fit: contain;">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="fw-bold">
+                            Panah Navigasi
+                        </div>
+                        <div>
+                            Gunakan panah navigasi untuk membukan halaman sebelumnya atau berikutnya
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 200px;">
+                        <img src="{{ asset('images/title-materi.png') }}" alt="">
+                    </td>
+                    <td>
+                        <div class="fw-bold">
+                            Judul Halaman
+                        </div>
+                        <div>
+                            Teks di atas halaman, merupakan judul yang mengelompokkan beberapa halaman setelahnya
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 200px;">
+                        <img src="{{ asset('images/quiz.png') }}" alt="">
+                    </td>
+                    <td>
+                        <div class="fw-bold">
+                            Quiz
+                        </div>
+                        <div>
+                            Pilih salah satu dari pilihan ganda yang menurutmu benar, lalku klik tombol <span
+                                class="fw-bold">Submit</span> untuk menyimpan jawaban
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 200px;">
+                        <img src="{{ asset('images/portal-tugas.png') }}" alt="">
+                    </td>
+                    <td>
+                        <div class="fw-bold">
+                            Portal Tugas
+                        </div>
+                        <div>
+                            Terdapat 2 tipe penugasan, upload file dan pengerjaan angket.
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 200px;">
+                        <img src="{{ asset('images/login-dialog.png') }}" alt="">
+                    </td>
+                    <td>
+                        <div class="fw-bold">
+                            Login Dialog
+                        </div>
+                        <div>
+                            Klik pada actionable apapun untuk memunculkan dialog tersebut
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>

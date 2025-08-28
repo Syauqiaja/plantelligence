@@ -6,24 +6,21 @@
 
                 <ol class="list-group list-group-numbered">
                     <li class="list-group-item">
-                        <strong>Buka Flipbook:</strong> Klik tombol <span class="badge bg-primary">Mulai Membaca</span>
-                        di halaman utama untuk membuka buku.
-                    </li>
-                    <li class="list-group-item">
                         <strong>Geser Halaman:</strong> Gunakan panah kanan atau kiri untuk berpindah halaman, atau klik
                         ujung buku.
                     </li>
                     <li class="list-group-item">
-                        <strong>Perbesar Gambar:</strong> Klik gambar tumbuhan untuk melihat dalam resolusi lebih
-                        tinggi.
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Temukan Bab:</strong> Gunakan menu <em>Daftar Isi</em> untuk langsung menuju bagian
+                        <strong>Temukan Bab:</strong> Gunakan menu <button class="d-inline text-blue fw-bold" id="btnDaftarIsi">Daftar Isi</button> untuk langsung menuju bagian
                         tertentu.
                     </li>
                     <li class="list-group-item">
-                        <strong>Cari Informasi:</strong> Gunakan fitur pencarian (jika tersedia) untuk menemukan istilah
-                        atau tumbuhan tertentu.
+                        <strong>Mentor AI:</strong> Gunakan Mentor AI di halaman Portal Tugas untuk membantumu menyelesaikan tugas yang ada.
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Quiz:</strong> Terdapat Quiz pada setiap materi, kerjakan dengan jujur yaa..
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Autentikasi:</strong> Kamu perlu <a href="">Daftar</a> atau <a href="">Masuk</a> untuk dapat melakukan aksi di flipbook ini. Tanpa autentikasi, kamu hanya bisa membaca materi saja.
                     </li>
                 </ol>
             </div>

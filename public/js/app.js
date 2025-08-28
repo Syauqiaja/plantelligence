@@ -67,4 +67,4 @@ window.addEventListener('closeModal', function(event){
     if (modalInstance) {
         modalInstance.hide();
     }
-});
+});1
