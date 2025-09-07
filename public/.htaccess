@@ -3,6 +3,45 @@
         Options -MultiViews -Indexes
     </IfModule>
 
+    # MIME Type Configuration - Move this to the top for priority
+    <IfModule mod_mime.c>
+        AddType application/javascript .js
+        AddType application/javascript .mjs
+        AddType text/css .css
+        AddType application/json .json
+        AddType application/xml .xml
+        AddType text/xml .xml
+        AddType application/rss+xml .rss
+        AddType application/atom+xml .atom
+        AddType image/x-icon .ico
+        AddType text/plain .txt
+        AddType text/x-component .htc
+    </IfModule>
+
+    # Force correct MIME types for JavaScript files using Headers module
+    <IfModule mod_headers.c>
+        # Set JavaScript MIME type explicitly
+        <FilesMatch "\.js$">
+            Header set Content-Type "application/javascript; charset=utf-8"
+        </FilesMatch>
+        
+        # Set ES6 modules MIME type
+        <FilesMatch "\.mjs$">
+            Header set Content-Type "application/javascript; charset=utf-8"
+        </FilesMatch>
+        
+        # Set CSS MIME type
+        <FilesMatch "\.css$">
+            Header set Content-Type "text/css; charset=utf-8"
+        </FilesMatch>
+
+        # Add security headers
+        Header add Content-Security-Policy "upgrade-insecure-requests"
+        Header always set X-Content-Type-Options nosniff
+        Header always set X-Frame-Options DENY
+        Header always set X-XSS-Protection "1; mode=block"
+    </IfModule>
+
     RewriteEngine On
 
     # Handle Authorization Header
@@ -12,6 +51,11 @@
     # Handle X-XSRF-Token Header
     RewriteCond %{HTTP:x-xsrf-token} .
     RewriteRule .* - [E=HTTP_X_XSRF_TOKEN:%{HTTP:X-XSRF-Token}]
+
+    # Serve static assets directly with proper headers
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteCond %{REQUEST_URI} \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$
+    RewriteRule ^(.*)$ $1 [L]
 
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
@@ -23,5 +67,31 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 
-    Header add Content-Security-Policy "upgrade-insecure-requests"
+    # Enable compression for better performance
+    <IfModule mod_deflate.c>
+        AddOutputFilterByType DEFLATE text/plain
+        AddOutputFilterByType DEFLATE text/html
+        AddOutputFilterByType DEFLATE text/xml
+        AddOutputFilterByType DEFLATE text/css
+        AddOutputFilterByType DEFLATE application/xml
+        AddOutputFilterByType DEFLATE application/xhtml+xml
+        AddOutputFilterByType DEFLATE application/rss+xml
+        AddOutputFilterByType DEFLATE application/javascript
+        AddOutputFilterByType DEFLATE application/x-javascript
+    </IfModule>
+
+    # Set cache headers for static assets
+    <IfModule mod_expires.c>
+        ExpiresActive On
+        ExpiresByType application/javascript "access plus 1 year"
+        ExpiresByType text/css "access plus 1 year"
+        ExpiresByType image/png "access plus 1 year"
+        ExpiresByType image/jpg "access plus 1 year"
+        ExpiresByType image/jpeg "access plus 1 year"
+        ExpiresByType image/gif "access plus 1 year"
+        ExpiresByType image/svg+xml "access plus 1 year"
+        ExpiresByType application/pdf "access plus 1 month"
+        ExpiresByType text/x-javascript "access plus 1 year"
+    </IfModule>
+
 </IfModule>

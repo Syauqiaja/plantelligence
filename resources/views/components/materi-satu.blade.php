@@ -14,7 +14,7 @@ $pageTitle = 'Materi 1: Air dan Sel Tumbuhan';
         </div>
         <div class="flex-grow-1">
             <iframe
-            src="{{asset('pdfjs/web/viewer.html')}}?file={{ asset('pdf/Materi_1.pdf') }}"
+            src="{{asset('pdf/web/viewer.html')}}?file={{ asset('pdf/Materi_1.pdf') }}"
             width="100%"
             height="100%"
             ></iframe>
