@@ -312,26 +312,6 @@
                         this.nextPage();
                     });
                 }
-                
-                // Keyboard navigation
-                document.addEventListener('keydown', (e) => {
-                    if (!this.isInitialized) return;
-                    
-                    switch (e.key) {
-                        case 'ArrowLeft':
-                            e.preventDefault();
-                            this.previousPage();
-                            break;
-                        case 'ArrowRight':
-                            e.preventDefault();
-                            this.nextPage();
-                            break;
-                        case ' ': // Spacebar
-                            e.preventDefault();
-                            this.nextPage();
-                            break;
-                    }
-                });
             }
             
             previousPage() {

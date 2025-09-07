@@ -14,6 +14,7 @@
             mampu mengembangkan Student ownership of learning dan literasi digital AImahasiswa melalui integrasi model pembelajaran Problem-Based Learning (PBL)
             berbantuan kecerdasan buatan.
         </p>
+        <br/>
         <p>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Penyusunan modul ini tidak hanya merujuk pada kurikulum terbaru dan tuntutan
             pembelajaran abad ke-21, tetapi juga mempertimbangkan karakteristik peserta didik
@@ -22,6 +23,7 @@
             eksplisit, dengan harapan dapat mengurangi terjadinya pengulangan materi dan
             memberikan kesinambungan pemahaman.
         </p>
+        <br/>
         <p>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dalam proses penyusunan modul ini, berbagai referensi ilmiah dan praktik baik dari
             pembelajaran inovatif dijadikan acuan, sehingga kualitas isi dan pendekatannya dapat
@@ -31,6 +33,11 @@
             terlepas dari dukungan para dosen pembimbing, rekan sejawat, serta berbagai pihak
             yang telah memberikan masukan dan validasi selama proses pengembangan.
         </p>
+    </div>
+</div>
+<div class="bg-white">
+
+    <div class="p-3 mt-5" style="font-size: 12px;">
         <p>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Penyusun menyadari sepenuhnya bahwa modul ini masih jauh dari kesempurnaan. Oleh
             karena itu, segala bentuk kritik dan saran yang membangun sangat diharapkan demi
