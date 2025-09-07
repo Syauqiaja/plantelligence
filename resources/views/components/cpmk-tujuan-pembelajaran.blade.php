@@ -204,5 +204,18 @@
                         digital.</span></li>
             </ol>
         </div>
+
+        <div class="mt-3 flex">
+            <div class="flex-grow-1 flex gap-3">
+                <div class="bg-purple" style="height: 16px; width: 16px;">
+                </div>
+                Literasi Digital
+            </div>
+            <div class="flex-grow-1 flex gap-3">
+                <div class="bg-teal" style="height: 16px; width: 16px;">
+                </div>
+                Student ownership of learning
+            </div>
+        </div>
     </div>
 </div>

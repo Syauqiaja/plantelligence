@@ -49,6 +49,7 @@
                             <div class="wrapper" id="flipbook-wrapper">
                                 <!-- Pages are now directly inside flipbook div -->
                                 <div id="flipbook" class="flipbook-loading">
+                                    <x-cpmk-tujuan-pembelajaran />
                                     <x-cover />
                                     <x-subcover />
                                     <x-kata-penganter />

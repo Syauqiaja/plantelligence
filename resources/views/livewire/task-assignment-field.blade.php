@@ -15,7 +15,7 @@
             data-bs-target="#authModal" @endif
             class="list-group-item list-group-item-action list-group-item-primary d-flex align-items-center- justify-content-between">
             <div>
-                <i class="bi bi-file-earmark-medical"></i> {{ basename($studentTask->file) }}
+                <i class="bi bi-file-earmark-medical"></i> Download {{ basename($studentTask->file) }}
             </div>
             <div>
                 <i class="bi bi-chevron-right"></i>
@@ -28,7 +28,7 @@
             data-bs-target="#authModal" @endif
             class="list-group-item list-group-item-action list-group-item-primary d-flex align-items-center- justify-content-between">
             <div>
-                <i class="bi bi-file-earmark-medical"></i> {{ basename($studentTask->file2) }}
+                <i class="bi bi-file-earmark-medical"></i> Download {{ basename($studentTask->file2) }}
             </div>
             <div>
                 <i class="bi bi-chevron-right"></i>
@@ -62,7 +62,7 @@
                             data-bs-target="#authModal" @endif
                             class="list-group-item list-group-item-action list-group-item-primary d-flex align-items-center- justify-content-between">
                             <div>
-                                <i class="bi bi-file-earmark-medical"></i> {{ basename($taskField->file) }}
+                                <i class="bi bi-file-earmark-medical"></i> Download {{ basename($taskField->file) }}
                             </div>
                             <div>
                                 <i class="bi bi-chevron-right"></i>
