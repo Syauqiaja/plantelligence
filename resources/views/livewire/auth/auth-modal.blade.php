@@ -45,7 +45,7 @@
                         Remember me
                     </label>
                 </div>
-                <a href="#" class="text-decoration-none text-primary fw-semibold">Forgot Password?</a>
+                <a href="{{ route('password.request') }}" class="text-decoration-none text-primary fw-semibold">Forgot Password?</a>
             </div>
             <button type="submit" class="btn btn-lg w-100 text-white fw-bold mb-3"
                 style="background: linear-gradient(135deg, rgb(8, 171, 171) 0%, rgb(0, 136, 255) 100%); border: none; border-radius: 12px;">

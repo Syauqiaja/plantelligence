@@ -14,10 +14,10 @@
                         tertentu.
                     </li>
                     <li class="list-group-item bg-soft-teal">
-                        <strong>Mentor AI:</strong> Gunakan Mentor AI di halaman Portal Tugas untuk membantumu menyelesaikan tugas yang ada.
+                        <strong>Mentor AI:</strong> Tanya Mentor AI jika butuh bantuan.
                     </li>
                     <li class="list-group-item bg-soft-teal">
-                        <strong>Quiz:</strong> Terdapat Quiz pada setiap materi, kerjakan dengan jujur yaa..
+                        <strong>Quiz:</strong> Jawablah pertanyaan dengan jujur sesuai pemahaman Anda
                     </li>
                     <li class="list-group-item bg-soft-teal">
                         <strong>Autentikasi:</strong> Kamu perlu <a href="">Daftar</a> atau <a href="">Masuk</a> untuk dapat melakukan aksi di flipbook ini. Tanpa autentikasi, kamu hanya bisa membaca materi saja.
