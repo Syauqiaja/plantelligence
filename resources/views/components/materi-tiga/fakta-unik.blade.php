@@ -1,10 +1,10 @@
 @php
     $pageTitle = 'Materi 3: Nutrisi dan Transport';
 @endphp
-<div class="bg-purple text-white">
+<div class="bg-soft-purple">
     <div class="position-relative h-100 w-100">
         <div class="p-5">
-            <h5 class="bg-white text-purple px-2 py-1">Tahukan Kamu?</h5>
+            <h5 class="bg-purple text-white px-2 py-1">Tahukan Kamu?</h5>
             <div>
                 <h5 class="fw-bold my-3">
                     Unsur Hara Mikro: Kecil Jumlahnya, Tapi Besar Perannya!
@@ -32,11 +32,11 @@
         </div>
     </div>
 </div>
-<div class="bg-purple text-white">
+<div class="bg-soft-purple">
     <div class="position-relative h-100 w-100">
         <div class="p-5">
 
-            <h5 class="bg-white text-purple px-2 py-1">Tahukan Kamu?</h5>
+            <h5 class="bg-purple text-white px-2 py-1">Tahukan Kamu?</h5>
             <h4 class="my-3">
                 Daun Bisa Berubah Peran: Dari Konsumen Menjadi Produsen Energi
             </h4>

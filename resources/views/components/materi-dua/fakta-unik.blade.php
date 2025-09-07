@@ -1,10 +1,10 @@
 @php
     $pageTitle = 'Materi 2: Transpirasi';
 @endphp
-<div class="bg-blue text-white">
+<div class="bg-soft-blue">
     <div class="position-relative h-100 w-100">
         <div class="p-5">
-            <h5 class="bg-white text-blue px-2 py-1">Tahukan Kamu?</h5>
+            <h5 class="bg-blue text-white px-2 py-1">Tahukan Kamu?</h5>
             <div>
                 <h5 class="fw-bold my-3">
                     Translokasi Gula Tidak Hanya Turun, Tapi Juga Bisa Naik dan Menyamping!
@@ -34,11 +34,11 @@
         </div>
     </div>
 </div>
-<div class="bg-blue text-white">
+<div class="bg-soft-blue">
     <div class="position-relative h-100 w-100">
         <div class="p-5">
 
-            <h5 class="bg-white text-blue px-2 py-1">Tahukan Kamu?</h5>
+            <h5 class="bg-blue text-white px-2 py-1">Tahukan Kamu?</h5>
             <h4 class="my-3">
                 Floem Tidak Hanya Angkut Gula Biasa, Tapi Juga Gula Alkohol dan Oligosakarida!
             </h4>

@@ -26,7 +26,7 @@
                 @endif>
 
             <!-- This label will turn .btn-light when selected -->
-            <label class="btn btn-outline-light d-flex align-items-center justify-content-center"
+            <label class="btn btn-outline-dark d-flex align-items-center justify-content-center"
                 for="answer_{{ $question->id }}_{{ $option }}" style="height: 32px; width: 32px;">
                 {{ $option }}
             </label>

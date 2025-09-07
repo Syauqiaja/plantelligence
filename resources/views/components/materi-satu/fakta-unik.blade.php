@@ -1,10 +1,10 @@
 @php
     $pageTitle = 'Materi 1: Air dan Sel Tumbuhan';
 @endphp
-<div class="bg-teal text-white">
+<div class="bg-soft-teal">
     <div class="position-relative h-100 w-100">
         <div class="p-5">
-                <h5 class="bg-white text-teal px-2 py-1">Tahukan Kamu?</h5>
+                <h5 class="bg-teal text-white px-2 py-1">Tahukan Kamu?</h5>
             <div class="my-4">
                 <img class="rounded" src="https://cdn.shopify.com/s/files/1/0289/9102/9332/files/shutterstock_1317343253_Converted_-01_480x480.jpg?v=1670852529"
                     alt="Placeholder untuk image ini" style="aspect-ratio: 1.8; width: 100%;">
@@ -29,7 +29,7 @@
         </div>
     </div>
 </div>
-<div class="bg-teal text-white">
+<div class="bg-soft-teal">
     <div class="position-relative w-100 h-100">
         <div class="p-5">
             <div>
@@ -55,11 +55,11 @@
         </div>
     </div>
 </div>
-<div class="bg-teal text-white">
+<div class="bg-soft-teal">
     <div class="position-relative h-100 w-100">
         <div class="p-5">
 
-            <h5 class="bg-white text-teal px-2 py-1">Tahukan Kamu?</h5>
+            <h5 class="bg-teal text-white px-2 py-1">Tahukan Kamu?</h5>
             <h4 class="my-3">
                 Tanaman Bisa Mengangkat Air Melawan Gravitasi, Tanpa Pompa!
             </h4>

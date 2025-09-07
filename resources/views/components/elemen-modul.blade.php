@@ -1,9 +1,9 @@
-<div class="bg-white">
+<div class="bg-soft-teal">
     <div class="h-100 p-3">
         <h5 class="text-center my-3">Elemen Modul</h5>
         <div class="border rounded mt-4 p-3">
             <table class="table" style="font-size: 13px;">
-                <tr>
+                <tr cla>
                     <td class="d-flex justify-content-center align-items-center">
                         <div style="height:64px; width: 64px;">
                             <img src="{{ asset('images/arrow.png') }}" style="object-fit: contain;">

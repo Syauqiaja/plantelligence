@@ -1,4 +1,4 @@
-<div class="bg-white">
+<div class="bg-soft-teal">
 
     <div class="p-3" style="font-size: 12px;">
         <h5 class="text-center my-3">Kata Pengantar</h5>
@@ -35,7 +35,7 @@
         </p>
     </div>
 </div>
-<div class="bg-white">
+<div class="bg-soft-teal">
 
     <div class="p-3 mt-5" style="font-size: 12px;">
         <p>

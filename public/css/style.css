@@ -1,43 +1,75 @@
+:root {
+  --teal-color: rgb(8, 171, 171);
+  --blue-color: rgb(0, 136, 255);
+  --purple-color: rgb(143, 64, 255);
+
+
+  --soft-teal-color: rgb(239, 255, 255);
+  --soft-blue-color: rgb(232, 244, 255);
+  --soft-purple-color: rgb(241, 232, 255);
+}
+
 .text-justify {
     text-align: justify;
 }
-
-body{
-    font-family: 'Georgia', serif;
-}
-
 .daftar-isi .nav-link:hover{
     background-color: gainsboro;
 }
 
 .bg-teal{
-    background-color: rgb(8, 171, 171);
+    background-color: var(--teal-color);
+}
+.bg-soft-teal{
+    background-color: var(--soft-teal-color);
 }
 
 .bg-blue{
-    background-color: rgb(0, 136, 255);
+    background-color: var(--blue-color);
+}
+.bg-soft-blue{
+    background-color: var(--soft-blue-color);
 }
 .bg-purple{
-    background-color: rgb(143, 64, 255);
+    background-color: var(--purple-color);
+}
+.bg-soft-purple{
+    background-color: var(--soft-purple-color);
+}
+.bg-gray{
+    background-color: #566367;
+}
+.bg-soft-teal .list-group-item{
+    background-color: var(--soft-teal-color);
 }
 .bg-gradient-blue{
-    background: linear-gradient(135deg, rgb(8, 171, 171) 0%, rgb(0, 136, 255) 100%); padding: 2rem 2rem 1rem;
+    background: linear-gradient(135deg, var(--teal-color) 0%, var(--blue-color) 100%); padding: 2rem 2rem 1rem;
+}
+.bg-soft-teal table td{
+    background-color: var(--soft-teal-color) !important;
 }
 
 .text-teal{
-    color: rgb(8, 171, 171);
+    color: var(--teal-color);
 }
 
 .text-blue{
-    color: rgb(0, 136, 255);
+    color: var(--blue-color);
 }
 .text-purple{
-    color: rgb(143, 64, 255);
+    color: var(--purple-color);
 }
-
 .border-dashed{
     border: 2px solid white;
     border-style: dashed;
+}
+.border-teal{
+  border-color: var(--teal-color);
+}
+.border-purple{
+  border-color: var(--purple-color);
+}
+.border-blue{
+  border-color: var(--blue-color);
 }
 #flipbook {
   transition: 0.25s ease-out;

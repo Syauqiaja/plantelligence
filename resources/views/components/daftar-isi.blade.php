@@ -1,6 +1,6 @@
-<div class="bg-white">
+<div class="bg-soft-teal">
     <div class="d-flex justify-content-start align-items-start h-100 daftar-isi">
-        <nav class="nav w-100 flex-column rounded p-3 bg-white">
+        <nav class="nav w-100 flex-column rounded p-3 bg-soft-teal">
             <h5 class="text-center my-3">Daftar Isi</h5>
             <div class="w-100" style="font-size: 13px;">
                 <button id="btnKataPengantar" class="nav-link mb-1 text-dark">Kata Pengantar</button>

@@ -13,7 +13,7 @@ $quizResult = Auth::user() ? \App\Models\QuizResult::where('user_id', Auth::user
 @for ($page = 0; $page < ceil($totalQuestions / $questionsPerPage); $page++) @php $startQuestion=$page *
     $questionsPerPage; $endQuestion=min(($page + 1) * $questionsPerPage, $totalQuestions);
     $questionsInThisPage=range($startQuestion, $endQuestion - 1); $isFirstPage=$page===0; @endphp <div
-    class="bg-{{ $color }} text-white">
+    class="bg-soft-{{ $color }} text-dark">
     <div class="position-relative w-100 h-100">
         <div class="p-3" style="font-size: 14px;">
             @if($isFirstPage)
@@ -33,10 +33,10 @@ $quizResult = Auth::user() ? \App\Models\QuizResult::where('user_id', Auth::user
         @if ($page == ceil($totalQuestions / $questionsPerPage) - 1)
         <div class="mt-5 mx-4 d-flex align-items-center justify-content-end">
             @auth
-            <button type="button" class="btn btn-light px-5 py-2" onclick="submitForm(event)"
+            <button type="button" class="btn btn-dark px-5 py-2" onclick="submitForm(event)"
                 data-title="{{ $pageTitle }}" data-materi="{{ $materi }}">
                 @else
-                <button data-bs-toggle="modal" data-bs-target="#authModal" class="btn btn-light  px-5 py-2"
+                <button data-bs-toggle="modal" data-bs-target="#authModal" class="btn btn-dark  px-5 py-2"
                     style="text-decoration: none;">
                     @endauth
                     Submit
@@ -44,11 +44,11 @@ $quizResult = Auth::user() ? \App\Models\QuizResult::where('user_id', Auth::user
         </div>
 
         @if ($quizResult)
-        <div class="p-3 border border-white rounded mx-5 mt-3">
+        <div class="p-3 border border-{{ $color }} rounded mx-5 mt-3">
             <h5>Skor Quiz</h5>
             {{ $quizResult->score }}
             <br />
-            <div class="bg-white text-{{ $color }} my-2 px-3">
+            <div class="bg-{{ $color }} text-white my-2 px-3">
                 Feedback
             </div>
             <p style="font-size: 13px;">{{scoreToFeedback($quizResult->score)}}</p>
