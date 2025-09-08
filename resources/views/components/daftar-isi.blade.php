@@ -11,12 +11,12 @@
                 <button id="btnPetaKonsep" class="nav-link mb-1 text-dark">Peta Konsep</button>
 
                 <!-- Materi 1 -->
-                <button id="btnMateri1" class="nav-link text-dark fw-bold">Materi 1: Air dan Sel Tumbuhan</button>
+                <button id="btnMateri1" class="nav-link text-dark fw-bold">Materi 1: Sel dan Air pada Tumbuhan</button>
                 <button id="btnMateri1FaktaUnik" class="nav-link ms-3 text-muted">• Fakta Unik</button>
                 <button id="btnMateri1Quiz" class="nav-link ms-3 text-muted">• Quiz</button>
 
                 <!-- Materi 2 -->
-                <button id="btnMateri2" class="nav-link text-dark fw-bold">Materi 2: Transpirasi</button>
+                <button id="btnMateri2" class="nav-link text-dark fw-bold">Materi 2: Keseimbangan Air dalam Tubuh Tumbuhan</button>
                 <button id="btnMateri2FaktaUnik" class="nav-link ms-3 text-muted">• Fakta Unik</button>
                 <button id="btnMateri2Quiz" class="nav-link ms-3 text-muted">• Quiz</button>
 

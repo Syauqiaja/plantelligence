@@ -1,5 +1,5 @@
 @php
-    $pageTitle = 'Materi 2: Transpirasi';
+    $pageTitle = 'Materi 2: Keseimbangan Air dalam Tubuh Tumbuhan';
 @endphp
 <div class="bg-blue text-white">
     <div class="position-relative h-100 w-100">
@@ -15,7 +15,7 @@
                 </div>
                 <div class="mt-3">
                     <div class="fw-bold">
-                        DiRefleksi dampak transpirasi terhadap efisiensi tumbuhan
+                        DiRefleksi dampak Keseimbangan Air dalam Tubuh Tumbuhan terhadap efisiensi tumbuhan
                     </div>
                     <a class="d-block ms-3 text-white mt-1" href="#" style="text-decoration: none;">
                         <i class="bi bi-file-earmark-fill"></i> LKM 9-10: Visualisasi + refleksi mendalam

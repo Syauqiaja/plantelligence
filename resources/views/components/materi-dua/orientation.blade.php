@@ -1,12 +1,12 @@
 @php
-    $pageTitle = 'Materi 2: Transpirasi';
+    $pageTitle = 'Materi 2: Keseimbangan Air dalam Tubuh Tumbuhan';
 @endphp
 <div class="bg-blue text-white">
     <div class="position-relative h-100 w-100">
         <div class="p-5">
             <h4 class="text-center border-dashed py-2 rounded">
                 MATERI 2 <br>
-                TRANSPIRASI
+                Keseimbangan Air dalam Tubuh Tumbuhan
             </h4>
 
             <div class="mt-4">

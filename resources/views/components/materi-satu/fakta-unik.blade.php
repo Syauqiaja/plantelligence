@@ -1,5 +1,5 @@
 @php
-    $pageTitle = 'Materi 1: Air dan Sel Tumbuhan';
+    $pageTitle = 'Materi 1: Sel dan Air pada Tumbuhan';
 @endphp
 <div class="bg-soft-teal">
     <div class="position-relative h-100 w-100">
@@ -89,7 +89,7 @@
                         <p>
                             Proses ini sangat penting karena air
                             membawa nutrisi esensial sekaligus membantu menjaga suhu tubuh tanaman
-                            melalui transpirasi. Ini adalah bukti betapa cerdas dan efisiennya sistem biologis
+                            melalui Keseimbangan Air dalam Tubuh Tumbuhan. Ini adalah bukti betapa cerdas dan efisiennya sistem biologis
                             tumbuhan.
                         </p>
                     </div>

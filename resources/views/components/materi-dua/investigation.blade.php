@@ -1,5 +1,5 @@
 @php
-    $pageTitle = 'Materi 2: Transpirasi';
+    $pageTitle = 'Materi 2: Keseimbangan Air dalam Tubuh Tumbuhan';
 @endphp
 <div class="bg-blue text-white">
     <div class="position-relative h-100 w-100">
@@ -10,7 +10,7 @@
                         <h6 class="bg-white rounded text-blue px-3 py-1">
                             2: Investigation
                         </h6>
-                        Praktikum simulasi transpirasi Studi literatur tentang stomata & kontrol kehilangan air
+                        Praktikum simulasi Keseimbangan Air dalam Tubuh Tumbuhan Studi literatur tentang stomata & kontrol kehilangan air
                     </div>
                 </div>
                 <div class="mt-3">

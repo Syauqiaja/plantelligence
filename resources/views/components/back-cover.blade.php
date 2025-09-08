@@ -19,8 +19,8 @@
                 </p>
                 <p>
                     Melalui modul ini, Anda telah diajak mengeksplorasi berbagai topik penting, mulai dari
-                    proses osmosis dan transpirasi, hingga pemahaman mendalam tentang defisiensi
-                    nutrisi dan transportasi air dan zat hara dalam tumbuhan. Lebih dari sekadar
+                    proses osmosis dan Keseimbangan Air dalam Tubuh Tumbuhan, hingga pemahaman mendalam tentang defisiensi
+                    Nutrisi dan Transport Nutrisi pada Tumbuhanasi air dan zat hara dalam tumbuhan. Lebih dari sekadar
                     menghafal teori, Anda telah terlibat dalam aktivitas Problem-Based Learning (PBL) yang
                     mendorong penyusunan pertanyaan kritis, kerja tim, analisis data, pembuatan infografis,
                     serta refleksi diri yang memperkuat student ownership of learning dan literasi digital

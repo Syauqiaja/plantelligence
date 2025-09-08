@@ -44,7 +44,7 @@ class Glosarium extends Component
         'Source' => 'Organ atau jaringan penghasil hasil fotosintesis, seperti daun dewasa.',
         'Spektrum aksi' => 'Grafik yang menunjukkan efektivitas panjang gelombang cahaya terhadap suatu proses biologi, seperti fotosintesis.',
         'Spektrum absorbsi' => 'Grafik yang menunjukkan panjang gelombang cahaya yang diserap oleh suatu pigmen.',
-        'Stomata' => 'Celah kecil di permukaan daun yang mengatur pertukaran gas dan transpirasi.',
+        'Stomata' => 'Celah kecil di permukaan daun yang mengatur pertukaran gas dan Keseimbangan Air dalam Tubuh Tumbuhan.',
         'Sukrosa' => 'Gula utama yang ditranslokasikan dalam floem sebagai bentuk utama hasil fotosintesis.',
         'Tilakoid' => 'Struktur membran dalam kloroplas tempat berlangsungnya reaksi terang dalam fotosintesis.',
         'Translokasi' => 'Proses pemindahan hasil fotosintesis (misalnya gula) dari sumber ke jaringan penyimpanan atau pertumbuhan.',

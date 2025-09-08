@@ -1,5 +1,5 @@
 @php
-    $pageTitle = 'Materi 3: Nutrisi dan Transport';
+    $pageTitle = 'Materi 3: Nutrisi dan Transport Nutrisi pada Tumbuhan';
 @endphp
 <div class="bg-purple text-white">
     <div class="position-relative h-100 w-100">

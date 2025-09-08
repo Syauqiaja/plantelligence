@@ -1,5 +1,5 @@
 @php
-    $pageTitle = 'Materi 2: Transpirasi';
+    $pageTitle = 'Materi 2: Keseimbangan Air dalam Tubuh Tumbuhan';
 @endphp
 <div class="bg-soft-blue">
     <div class="position-relative h-100 w-100">

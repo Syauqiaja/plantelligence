@@ -3,7 +3,7 @@
         <div class="flex gap-2">
             <h4 class="text-center border-dashed border-purple py-2 rounded flex-grow-1 fw-bold my-auto">
                 MATERI 3 <br>
-                Nutrisi dan Transport
+                Nutrisi dan Transport Nutrisi pada Tumbuhan
             </h4>
             <div class="bg-white rounded-md p-1" style="height: 64px; aspect-ratio: 1;">
                 <img src="{{ asset('images/qr-code.png') }}" alt="qr-code materi">
@@ -19,4 +19,4 @@
     </div>
 </div>
 <x-materi-tiga.fakta-unik/>
-<x-quiz-page :materi="3" :pageTitle="'Materi 3: Nutrisi dan Transport'" :color="'purple'"/>
+<x-quiz-page :materi="3" :pageTitle="'Materi 3: Nutrisi dan Transport Nutrisi pada Tumbuhan'" :color="'purple'"/>

@@ -4,7 +4,7 @@
         <div class="flex gap-2">
             <h4 class="text-center border-dashed border-blue py-2 rounded flex-grow-1 fw-bold my-auto">
                 MATERI 2 <br>
-                Transpirasi
+                Keseimbangan Air dalam Tubuh Tumbuhan
             </h4>
             <div class="bg-white rounded-md p-1" style="height: 64px; aspect-ratio: 1;">
                 <img src="{{ asset('images/qr-code.png') }}" alt="qr-code materi">
@@ -20,4 +20,4 @@
     </div>
 </div>
 <x-materi-dua.fakta-unik/>
-<x-quiz-page :materi="2" :pageTitle="'Materi 2: Transpirasi'" :color="'blue'"/>
+<x-quiz-page :materi="2" :pageTitle="'Materi 2: Keseimbangan Air dalam Tubuh Tumbuhan'" :color="'blue'"/>

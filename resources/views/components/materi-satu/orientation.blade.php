@@ -1,5 +1,5 @@
 @php
-    $pageTitle = 'Materi 1: Air dan Sel Tumbuhan';
+    $pageTitle = 'Materi 1: Sel dan Air pada Tumbuhan';
 @endphp
 <div class="bg-teal text-white">
     <div class="position-relative h-100 w-100">
