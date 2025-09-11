@@ -7,7 +7,9 @@
                 Keseimbangan Air dalam Tubuh Tumbuhan
             </h4>
             <div class="bg-white rounded-md p-1" style="height: 64px; aspect-ratio: 1;">
-                <img src="{{ asset('images/qr-code.png') }}" alt="qr-code materi">
+                <a href="https://drive.google.com/drive/folders/1GBm74uVGFBXeo60KOwNtqEESaAwkQTM9?usp=drive_link" target="_blank">
+                    <img src="{{ asset('images/qr-code.png') }}" alt="qr-code materi">
+                </a>
             </div>
         </div>
         <div class="flex-grow-1">

@@ -7,7 +7,8 @@ $totalQuestions = $quiz->questions->count();
 $questionIds = $quiz->questions->pluck('id');
 $questionsPerPage = 3;
 $options = ['A', 'B', 'C', 'D'];
-$quizResult = Auth::user() ? \App\Models\QuizResult::where('user_id', Auth::user()->id)->where('quiz_id', $quizId)->first() : null;
+$quizResult = Auth::user() ? \App\Models\QuizResult::where('user_id', Auth::user()->id)->where('quiz_id',
+$quizId)->first() : null;
 @endphp
 
 @for ($page = 0; $page < ceil($totalQuestions / $questionsPerPage); $page++) @php $startQuestion=$page *
@@ -34,7 +35,7 @@ $quizResult = Auth::user() ? \App\Models\QuizResult::where('user_id', Auth::user
         <div class="mt-5 mx-4 d-flex align-items-center justify-content-end">
             @auth
             <button type="button" class="btn btn-dark px-5 py-2" onclick="submitForm(event)"
-                data-title="{{ $pageTitle }}" data-materi="{{ $materi }}">
+                data-title="{{ $pageTitle }}" data-materi="{{ $materi }}" data-ids="{{ $questionIds->toJson() }}" data-quizId={{ $quizId }}>
                 @else
                 <button data-bs-toggle="modal" data-bs-target="#authModal" class="btn btn-dark  px-5 py-2"
                     style="text-decoration: none;">
@@ -62,23 +63,75 @@ $quizResult = Auth::user() ? \App\Models\QuizResult::where('user_id', Auth::user
     @pushOnce('scripts')
     <script>
         function submitForm(event) {
-    console.log(event);
+    console.log(JSON.parse(event.target.getAttribute('data-ids')));
     
-    // Get all radio button answers from the flipbook
+    // Get all radio button answers from the flipbook (including hidden pages)
     const answers = {};
     const totalQuestions = {{ $totalQuestions }};
-    const questionIds = @json($questionIds);
+    const questionIds =JSON.parse(event.target.getAttribute('data-ids'));
     let answeredQuestions = 0;
     const materi = event.target.getAttribute('data-materi');
+    const quizId = event.target.getAttribute('data-quizId');
     
-    // Collect all answers from radio inputs
-    questionIds.forEach(i => {
-        const checkedRadio = document.querySelector(`input[name="answer_${i}_${materi}"]:checked`);
-        if (checkedRadio) {
-            answers[`${i}`] = checkedRadio.value;
+    // Get the flipbook instance and its page objects
+    const flipbook = $('#flipbook');
+    const flipbookData = flipbook.data();
+    
+    // Function to search for inputs in a jQuery element
+    function findInputsInElement($element) {
+        // Search within the element and its children
+        return $element.find('input').add($element.filter('input'));
+    }
+    
+    // Collect all answers from radio inputs across all pages
+    questionIds.forEach(questionId => {
+        let found = false;
+        
+        // First, try to find in the visible DOM
+        const visibleRadio = document.querySelector(`input[name="answer_${questionId}_${materi}"]:checked`);
+        if (visibleRadio) {
+            answers[`${questionId}`] = visibleRadio.value;
             answeredQuestions++;
+            found = true;
+        } else {
+            // If not found in visible DOM, search through all pageObjs
+            if (flipbookData && flipbookData.pageObjs) {
+                Object.values(flipbookData.pageObjs).forEach(pageObj => {
+                    if (!found && pageObj && pageObj.length) {
+                        // Search for checked radio buttons in this page
+                        const $checkedRadio = findInputsInElement(pageObj).filter(`[name="answer_${questionId}_${materi}"]:checked`);
+                        if ($checkedRadio.length > 0) {
+                            answers[`${questionId}`] = $checkedRadio.val();
+                            answeredQuestions++;
+                            found = true;
+                        }
+                    }
+                });
+            }
+        }
+        
+        // If still not found, check if there's an unchecked input (to know the question exists)
+        if (!found) {
+            // Check in visible DOM first
+            const visibleInput = document.querySelector(`input[name="answer_${questionId}_${materi}"]`);
+            let inputExists = !!visibleInput;
+            
+            // If not in visible DOM, check pageObjs
+            if (!inputExists && flipbookData && flipbookData.pageObjs) {
+                Object.values(flipbookData.pageObjs).forEach(pageObj => {
+                    if (!inputExists && pageObj && pageObj.length) {
+                        const $input = findInputsInElement(pageObj).filter(`[name="answer_${questionId}_${materi}"]`);
+                        if ($input.length > 0) {
+                            inputExists = true;
+                        }
+                    }
+                });
+            }
         }
     });
+    
+    console.log('Collected answers:', answers);
+    console.log(`Answered ${answeredQuestions} out of ${totalQuestions} questions of materi ${materi}`);
     
     // Validate that all questions are answered
     if (answeredQuestions < totalQuestions) {
@@ -103,7 +156,6 @@ $quizResult = Auth::user() ? \App\Models\QuizResult::where('user_id', Auth::user
         formData.append('page_title', pageTitle);
     }
 
-    const quizId = {{ $quizId }};
     if (quizId) {
         formData.append('quiz_id', quizId);
     }
@@ -112,6 +164,92 @@ $quizResult = Auth::user() ? \App\Models\QuizResult::where('user_id', Auth::user
     submitWithAjax(formData);
 }
 
+// Alternative approach: Force all pages to be rendered before collecting data
+function submitFormAlternative(event) {
+    console.log(JSON.parse(event.target.getAttribute('data-ids')));
+    
+    const answers = {};
+    const totalQuestions = {{ $totalQuestions }};
+    const questionIds = JSON.parse(event.target.getAttribute('data-ids'));
+    let answeredQuestions = 0;
+    const materi = event.target.getAttribute('data-materi');
+    const flipbook = $('#flipbook');
+    const quizId = event.target.getAttribute('data-quizId');
+    
+    // Store current page
+    const currentPage = flipbook.turn('page');
+    
+    // Function to collect answers from current visible pages
+    function collectAnswers() {
+        questionIds.forEach(questionId => {
+            if (!answers[`${questionId}`]) { // Only collect if not already found
+                const checkedRadio = document.querySelector(`input[name="answer_${questionId}_${materi}"]:checked`);
+                if (checkedRadio) {
+                    answers[`${questionId}`] = checkedRadio.value;
+                }
+            }
+        });
+    }
+    
+    // Collect answers from all pages by visiting each page
+    let pagesVisited = 0;
+    const totalPages = flipbook.turn('pages');
+    
+    function visitNextPage() {
+        pagesVisited++;
+        collectAnswers();
+        
+        if (pagesVisited <= totalPages) {
+            if (pagesVisited < totalPages) {
+                // Go to next page and collect after a short delay
+                flipbook.turn('page', pagesVisited + 1);
+                setTimeout(visitNextPage, 100); // Small delay to ensure page is rendered
+            } else {
+                // Finished visiting all pages, go back to original page
+                flipbook.turn('page', currentPage);
+                finishSubmission();
+            }
+        }
+    }
+    
+    function finishSubmission() {
+        // Count answered questions
+        answeredQuestions = Object.keys(answers).length;
+        
+        console.log('Collected answers:', answers);
+        console.log(`Answered ${answeredQuestions} out of ${totalQuestions} questions`);
+        
+        // Validate that all questions are answered
+        if (answeredQuestions < totalQuestions) {
+            alert(`Please answer all questions. You have answered ${answeredQuestions} out of ${totalQuestions} questions of materi ${materi}.`);
+            return;
+        }
+        
+        // Create FormData and submit
+        const formData = new FormData();
+        
+        const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
+        if (csrfToken) {
+            formData.append('_token', csrfToken);
+        }
+        
+        formData.append('answers', JSON.stringify(answers));
+        
+        const pageTitle = event.target.getAttribute('data-title');
+        if (pageTitle) {
+            formData.append('page_title', pageTitle);
+        }
+
+        if (quizId) {
+            formData.append('quiz_id', quizId);
+        }
+        
+        submitWithAjax(formData);
+    }
+    
+    // Start the process
+    visitNextPage();
+}
 // AJAX submission function
 function submitWithAjax(formData) {
     // Show loading state

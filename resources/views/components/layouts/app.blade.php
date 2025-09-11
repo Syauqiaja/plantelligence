@@ -264,6 +264,7 @@
                             width: scaledWidth,
                             autoCenter: true,
                             display: 'double',
+                            pagesInDOM: 7,
                             when: {
                                 start: (event, pageObject, corner) => {
                                     // Optional: Add custom behavior when page turn starts

@@ -67,8 +67,9 @@
                             Login Dialog
                         </div>
                         <div>
-                            Klik pada actionable apapun untuk memunculkan dialog tersebut
                         </div>
+                        Untuk menampilkannya, klik pada tombol Submit di Quiz, klik pada semua tombol di halaman Portal Tugas, atau <button data-bs-toggle="modal" data-bs-target="#authModal" class="btn btn-dark px-3 py-1"
+                    style="text-decoration: none; font-size: 13px important!;">Klik Di Sini</button>.
                     </td>
                 </tr>
             </table>
