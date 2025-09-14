@@ -490,25 +490,25 @@
         }
 
         const pageMap = {
-            btnDaftarIsi: 9,
             btnKataPengantar: 3,
-            btnPetunjukPenggunaan: 4,
-            btnElemenModul: 5,
-            btnCPMK: 6,
-            btnPetaKonsep: 10,
-            btnMateri1: 11,
-            btnMateri1FaktaUnik: 12,
-            btnMateri1Quiz: 16,
-            btnMateri2: 20,
-            btnMateri2FaktaUnik: 21,
-            btnMateri2Quiz: 23,
-            btnMateri3: 27,
-            btnMateri3FaktaUnik: 28,
-            btnMateri3Quiz: 30,
-            btnPortalTugas: 34,
-            btnGlosarium: 42,
-            btnDaftarPustaka: 45,
-            btnHalamanPenutup: 46
+            btnPetunjukPenggunaan: 5,
+            btnElemenModul: 6,
+            btnCPMK: 7,
+            btnDaftarIsi: 11,
+            btnPetaKonsep: 12,
+            btnMateri1: 13,
+            btnMateri1FaktaUnik: 14,
+            btnMateri1Quiz: 17,
+            btnMateri2: 21,
+            btnMateri2FaktaUnik: 22,
+            btnMateri2Quiz: 24,
+            btnMateri3: 28,
+            btnMateri3FaktaUnik: 29,
+            btnMateri3Quiz: 31,
+            btnPortalTugas: 35,
+            btnGlosarium: 43,
+            btnDaftarPustaka: 46,
+            btnHalamanPenutup: 47
         };
 
         // Loop and attach listeners
