@@ -1,7 +1,7 @@
 <div class="bg-soft-teal">
 
     <div class="p-3" style="font-size: 12px;">
-        <h5 class="text-center my-3">Kata Pengantar</h5>
+        <h5 class="text-center my-3 title-text">Kata Pengantar</h5>
         <span style="font-style: italic;">Assalamu'alaikum Warahmatullahi Wabarakatuh</span> <br>  <br>
         <p>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Alhamdulillah, puji syukur saya panjatkan ke hadirat Allah SWT atas segala limpahan

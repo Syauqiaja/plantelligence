@@ -1,6 +1,6 @@
 <div class="bg-soft-teal">
     <div class="h-100 p-3">
-        <h5 class="text-center my-3">Petunjuk Penggunaan</h5>
+        <h5 class="text-center my-3 title-text">Petunjuk Penggunaan</h5>
         <div class="card mt-4">
             <div class="card-body bg-soft-teal">
 

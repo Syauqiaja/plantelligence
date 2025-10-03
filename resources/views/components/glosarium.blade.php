@@ -1,6 +1,6 @@
 <div class="bg-white">
     <div class="h-100 p-4">
-        <h5 class="text-center my-3">Glosarium</h5>
+        <h5 class="text-center my-3 title-text">Glosarium</h5>
         <div>
             <table class="table table-hover" style="font-size: 13px;">
                 @foreach ($glosariumPageOne as $key => $item)

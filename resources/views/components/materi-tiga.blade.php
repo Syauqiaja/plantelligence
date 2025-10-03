@@ -1,14 +1,18 @@
 <div class="bg-soft-purple text-purple">
     <div class="h-100 w-100 p-3 d-flex flex-column gap-2">
-        <div class="flex gap-2">
-            <h4 class="text-center border-dashed border-purple py-2 rounded flex-grow-1 fw-bold my-auto">
+        <div class="flex gap-2 align-items-center justify-content-center">
+            <h4 class="text-center border-dashed border-purple py-3 rounded flex-grow-1 fw-bold flex align-items-center justify-content-center">
                 MATERI 3 <br>
                 Nutrisi dan Transport Nutrisi pada Tumbuhan
             </h4>
-            <div class="bg-white rounded-md p-1" style="height: 64px; aspect-ratio: 1;">
-                <a href="https://drive.google.com/drive/folders/1GBm74uVGFBXeo60KOwNtqEESaAwkQTM9?usp=drive_link" target="_blank">
-                    <img src="{{ asset('images/qr-code.png') }}" alt="qr-code materi">
-                </a>
+            <div>
+                <span style="font-size: 12px;">Scan di sini</span>
+                <div class="bg-white rounded-md p-1" style="height: 64px; aspect-ratio: 1;">
+                    <a href="https://drive.google.com/drive/folders/1GBm74uVGFBXeo60KOwNtqEESaAwkQTM9?usp=drive_link"
+                        target="_blank">
+                        <img src="{{ asset('images/qr-code.png') }}" alt="qr-code materi">
+                    </a>
+                </div>
             </div>
         </div>
         <div class="flex-grow-1">

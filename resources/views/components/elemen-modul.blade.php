@@ -1,6 +1,6 @@
 <div class="bg-soft-teal">
     <div class="h-100 p-3">
-        <h5 class="text-center my-3">Elemen Modul</h5>
+        <h5 class="text-center my-3 title-text">Elemen Modul</h5>
         <div class="border rounded mt-4 p-3">
             <table class="table" style="font-size: 13px;">
                 <tr cla>

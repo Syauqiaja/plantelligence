@@ -50,7 +50,7 @@ class TaskSeeder extends Seeder
                 'file' => asset('doc/Lembar Kerja Mahasiswa 2.docx'),
                 'fields' => [
                     ['title' => 'Pengumpulan Mind Map', 'order' => 0, 'format' => '[Nama Kelompok]_Mindmap'],
-                    ['title' => 'Pengumpulan Tugas Analisis Kritis Artikel', 'order' => 1, 'format' => '[Nama Kelompok]_Antis'],
+                    ['title' => 'Pengumpulan Resume', 'order' => 1, 'format' => '[Nama Kelompok]_Resume'],
                     ['title' => 'Pengumpulan LKM', 'order' => 2, 'format' => '[Nama Kelompok]_LKM 2'],
                 ],
             ],
@@ -58,18 +58,18 @@ class TaskSeeder extends Seeder
                 'title' => 'Assist independent and group investigation',
                 'key' => StudentTaskKey::INVESTIGATION->value,
                 'file' => asset('doc/Lembar Kerja Mahasiswa 3.docx'),
-                'file2' => asset('doc/Lembar Kerja Mahasiswa 4.docx'),
+                'file2' => asset('doc/Panduan Observasi.pdf'),
                 'fields' => [
-                    ['title' => 'Pengumpulan laporan sementara praktikum 1', 'order' => 0, 'format' => '[Nama Kelompok]_Laporan Sementara 1'],
-                    ['title' => 'Pengumpulan laporan sementara praktikum 2', 'order' => 1, 'format' => '[Nama Kelompok]_Laporan Sementara 2'],
-                    ['title' => 'Pengumpulan Tugas rencana investigasi', 'order' => 2, 'format' => '[Nama Kelompok]_Rencana Investigasi'],
-                    ['title' => 'Pengumpulan Tugas hasil investigasi', 'order' => 3, 'format' => '[Nama Kelompok]_Hasil Investigasi'],
+                    ['title' => 'Pengumpulan Tugas rencana investigasi', 'order' => 0, 'format' => '[Nama Kelompok]_Rencana Investigasi'],
+                    ['title' => 'Pengumpulan Tugas hasil investigasi', 'order' => 1, 'format' => '[Nama Kelompok]_Hasil Investigasi'],
+                    ['title' => 'Pengumpulan Analisis Data Sementara', 'order' => 2, 'format' => '[Nama Kelompok]_Analisis Data Sementara'],
+                    ['title' => 'Pengumpulan Penyusunan Temuan Awal', 'order' => 3, 'format' => '[Nama Kelompok]_Penyusunan Temuan Awal'],
                 ],
             ],
             [
                 'title' => 'Develop and present artifacts and exhibits',
                 'key' => StudentTaskKey::DEVELOP_EXHIBITS->value,
-                'file' => asset('doc/Lembar Kerja Mahasiswa 5.docx'),
+                'file' => asset('doc/Lembar Kerja Mahasiswa 4.docx'),
                 'fields' => [
                     ['title' => 'Rencana Solusi', 'order' => 0, 'format' => '[Nama Kelompok]_Rencana Solusi'],
                     ['title' => 'Pengumpulan Hasil Karya', 'order' => 1, 'format' => '[Nama Kelompok]_Hasil Karya'],
@@ -78,8 +78,8 @@ class TaskSeeder extends Seeder
             [
                 'title' => 'Analyze and evaluate the problem-solving process',
                 'key' => StudentTaskKey::ANALYZE_EVALUATE->value,
-                'file' => asset('doc/Lembar Kerja Mahasiswa 6.docx'),
-                'file2' => asset('doc/Lembar Kerja Mahasiswa 7.docx'),
+                'file' => asset('doc/Lembar Kerja Mahasiswa 5.docx'),
+                'file2' => asset('doc/Instrumen Analisis dan Evaluasi.docx'),
                 'fields' => [
                     ['title' => 'Pengumpulan hasil analisis dan evaluasi', 'order' => 0, 'format' => '[Nama Kelompok]_Hasil analisis dan evaluasi'],
                 ],

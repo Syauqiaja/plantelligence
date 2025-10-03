@@ -2,12 +2,12 @@
 
 @php
 $quiz = \App\Models\Quiz::where('order', $materi)->first();
-$quizId = $quiz->id;
-$totalQuestions = $quiz->questions->count();
-$questionIds = $quiz->questions->pluck('id');
+$quizId = $quiz?->id;
+$totalQuestions = $quiz?->questions->count();
+$questionIds = $quiz?->questions->pluck('id');
 $questionsPerPage = 3;
 $options = ['A', 'B', 'C', 'D'];
-$quizResult = Auth::user() ? \App\Models\QuizResult::where('user_id', Auth::user()->id)->where('quiz_id',
+$quizResult = Auth::user() && $quizId ? \App\Models\QuizResult::where('user_id', Auth::user()->id)->where('quiz_id',
 $quizId)->first() : null;
 @endphp
 

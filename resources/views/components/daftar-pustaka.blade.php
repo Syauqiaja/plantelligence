@@ -1,6 +1,6 @@
 <div class="bg-white">
     <div class="h-100 p-4">
-        <h5 class="text-center my-3">Daftar Pustaka</h5>
+        <h5 class="text-center my-3 title-text">Daftar Pustaka</h5>
         
         <div class="bibliography mt-3" style="font-size: 13px;">
             <p>Bhatla, S. C., & Lal, M. A. (2018). <i>Plant Physiology, Development and Metabolism</i>. Springer Singapore.</p>
